@@ -1,0 +1,52 @@
+// page main structure
+
+.page
+	container()
+	padding 0 10px
+
+.login
+	center: 375px
+	color color-light
+	min-height 100vh
+	padding-top 100px
+	padding-bottom 20px
+	display grid
+	grid-template-columns 1fr
+	align-items center
+	justify-content center
+	box-sizing border-box
+	
+	+below( $tablet )
+		max-width 480px
+		padding-top 60px
+		
+	+below( $phone )
+		padding-top 40px
+		padding-bottom 10px
+		
+	&-content
+		position relative
+		
+		+below( $phone )
+			padding 0 15px
+		
+	&-title
+		text-align center
+		font-size 32px
+		font-maven-medium()
+		margin-bottom 32px
+		line-height 1
+		
+		+below( $phone )
+			font-size 26px
+			margin-bottom 16px
+	
+	&-subtitle
+		text-align center
+		font-size 18px
+		font-light()
+		
+		+below( $phone )
+			font-size 16px
+			line-height 1.2
+	

@@ -1,0 +1,38 @@
+/*
+ * Edit development utility.
+ *
+ *
+ * Examples:
+ *
+ *     edit()
+ *
+ */
+
+// depth guide
+depth()
+	*
+		background-color alpha( #000 , .075 )
+
+// outline guide
+rules()
+	@import 'pesticide'
+
+// baseline
+basehold()
+	background-image url('http://basehold.it/i/24')
+
+// Mark outline
+mark(color = black, flag = true)
+	outline 1px solid color
+	box-sizing border-box
+
+// Mark depth class
+mark-depth(class, depth = 4, colors = red green blue black, selector = selector() )
+	selectors = split(' ', selector)
+	lastIndex = length(selectors) - 1
+	lastSelector = selectors[lastIndex]
+	class = selector
+	for n in 1...depth
+		/{ class }
+			border 1px solid colors[n - 1]
+		class = class + ' ' + lastSelector

@@ -1,0 +1,98 @@
+// form container
+
+.form
+	position relative
+	box-sizing border-box
+	
+	select
+	textarea
+	input[type="text"]
+	input[type="email"]
+	input[type="password"]
+		width 100%
+		padding 0
+		margin 0
+		text-align left
+		border none
+		border-radius 0
+		background-color transparent
+		box-sizing border-box
+		&:focus
+			outline none
+	
+	.control
+		position relative
+		margin-bottom 24px
+		box-sizing border-box
+		
+		+below( $phone )
+			margin-bottom 12px
+
+
+.form.basic
+	center: 280px
+	padding-top 80px
+	
+	input[type="text"]
+	input[type="email"]
+	input[type="password"]
+		height 40px
+		font-size 21px
+		font-default()
+		color color-light
+		transition all ease-out .4s
+		border-bottom 1px solid alpha(color-grey, 40%)
+		
+		&:focus
+			border-bottom 1px solid color-light
+	
+	label
+		display block
+		font-size 14px
+	
+	.control.error
+		input[type="text"]
+		input[type="email"]
+		input[type="password"]
+			border-color color-shadow
+			color color-shadow
+		label
+			color color-shadow
+	
+	.info
+		text-align center
+		text-decoration none
+		font-weight 100
+		
+		+below( $phone )
+			font-size 14px
+			
+	
+	+below( $phone )
+		padding-top 40px
+		max-width 420px
+	
+
+.social-sign
+	position relative
+	text-align center
+	margin-top 120px
+	margin-bottom 32px
+	
+	+below( $tablet )
+		margin-top 80px
+	+below( $phone )
+		margin-top 40px
+	
+	.social-item
+		display inline-block
+		vertical-align middle
+		cursor pointer
+		border-radius 100%
+		text-align center
+		margin 0 13px
+		size: 40px
+		border 2px solid color-light
+		font-size 18px
+		line-height 40px
+		
